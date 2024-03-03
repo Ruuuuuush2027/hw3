@@ -138,7 +138,6 @@ bool Circuit::parse(const char* fname)
             }
         }
     }
-    std::cout << "DONE!!" << std::endl;
     return true;
 }
 

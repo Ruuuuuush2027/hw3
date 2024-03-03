@@ -67,11 +67,7 @@ void dealloc(Node* head)
 //   function object struct declarations
 // -----------------------------------------------
 
-struct OddFilter{
-    bool operator()(int num){
-        return num < 5;
-    }
-};
+
 
 
 
@@ -90,12 +86,12 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
-    Node* res;
-    OddFilter comparator;
+    Node* smaller = & (*head), * larger = & (*head);
 
-    res = llfilter(head, comparator);
-    print(res);
-    
+    llpivot(head, smaller, larger, 1);
+    print(smaller);
+    print(larger);
+
     return 0;
 
 }
