@@ -1,2 +1,7 @@
 *.o
 llrec-test
+heap-test
+heap-test.cpp
+stack_test
+stack_test.cpp
+hw3_tests
