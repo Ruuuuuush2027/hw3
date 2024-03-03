@@ -7,7 +7,8 @@ all: llrec-test
 #-----------------------------------------------------
 # ADD target(s) to build your llrec-test executable
 #-----------------------------------------------------
-
+llrec-test: llrec-test.cpp llrec.cpp
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
 clean:
 	rm -f *.o rh llrec-test *~
