@@ -66,8 +66,8 @@ public:
     void print() const;
 private:
     int ary;
-    std::vector<T> data;
     PComparator compare;
+    std::vector<T> data;
 };
 
 // Add implementation of member functions here
@@ -140,7 +140,7 @@ void Heap<T,PComparator>::pop(){
         data[j] = temp;
         i = j;
 
-        for(int k = i * ary + 1; k <= i * ary + ary; k ++){
+        for(size_t k = i * ary + 1; k <= i * ary + ary; k ++){
             if(k < data.size() && compare(data[k], data[j]))
                 j = k;
         }
